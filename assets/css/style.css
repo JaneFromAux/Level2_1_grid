@@ -9,7 +9,7 @@ section {
     display: grid;
     grid-template-columns: 250px 250px 250px;
     ;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 250px 250px 250px;
     gap: 10px;
     grid-template-areas: " box1 box2 box3"
         "box4  box5 box6"
@@ -17,23 +17,36 @@ section {
 }
 
 section div {
-    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+    /* padding-top: 47%; */
+    /* display: none; */
+
+}
+
+section div:hover>h3 {
+    padding-top: 48%;
+    top: 0;
+    transition: all 0.5s linear;
+}
+
+section div h3 {
     color: white;
-    height: 250px;
-    width: 250px;
+    padding-top: 0%;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
     text-align: center;
-    padding-top: 47%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s linear;
 }
 
 .box1 {
     grid-area: box1;
 }
 
-.box1:hover+div1 {
-    position: abolute;
-    top: 10px;
-    left: 10px;
-}
 
 .box2 {
     grid-area: box2;
